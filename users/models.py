@@ -10,8 +10,8 @@ class Profile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    codeUTEC = models.CharField(max_length=10)
-    nTokens = models.IntegerField(default=0)
+    codeUTEC = models.CharField(max_length=10, blank=True)
+    nTokens = models.IntegerField(default=0, blank=True)
 
     picture = models.ImageField(
         upload_to='users/pictures',
@@ -19,6 +19,8 @@ class Profile(models.Model):
         null=True
     )
     
+    phoneNumber = models.CharField(max_length=50, blank=True)
+
     TYPE_MEMBER_CHOICES = [
         ('N','New'),
         ('C','Copper'),

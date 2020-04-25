@@ -6,6 +6,6 @@ from home import views
 
 urlpatterns = [
     path(route='',
-         name='home',
+         name='homepage',
          view=views.HomePageView.as_view())
 ]

@@ -9,7 +9,7 @@ class ProfileAdmin(admin.ModelAdmin):
     """ Profile admin """
     list_display = ('pk', 'user', 'codeUTEC',
                     'nTokens', 'typeMember', 
-                    'carrera','picture')
+                    'carrera','phoneNumber','picture')
     
     list_display_links = ('pk','user','codeUTEC')
     list_editable = ('nTokens', 'typeMember',

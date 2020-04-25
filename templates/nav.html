@@ -10,23 +10,35 @@
             <ul class="navbar-nav mr-auto">
 
                 <li class="nav-item">
-                    <a href="{% url "home:home" %}">
+                    <a href="{% url "home:homepage" %}">
                         {% if request.user.profile.picture %}
-                            <img src="{{ request.user.profile.picture.url }}" height="35" class="d-inline-block align-top rounded-circle"/>
+                            <img src="{{ request.user.profile.picture.url }}" height="35" widht= "35" class="d-inline-block align-top rounded-circle"/>
                         {% else%}
-                            <img src="{% static 'img/default-profile.png' %}" height="35" class="d-inline-block align-top rounded-circle"/>
+                            <img src="{% static 'img/default-profile.png' %}" height="35" widht= "35" class="d-inline-block align-top rounded-circle"/>
                         {% endif %}
                     </a>
                 </li>
 
                 <li class="nav-item nav-icon">
-                    <a href="{% url "home:home" %}">
+                    <a href="{% url "home:homepage" %}">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </a>
+                </li>
+
+                <li class="nav-item nav-icon">
+                    <a href="{% url "users:update" %}">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                </li>
+                
+                <li class="nav-item nav-icon">
+                    <a href="{% url "home:homepage" %}">
                         <i class="fas fa-plus"></i>
                     </a>
                 </li>
 
                 <li class="nav-item nav-icon">
-                    <a href="{% url "home:home" %}">
+                    <a href="{% url "users:logout" %}">
                         <i class="fas fa-sign-out-alt"></i>
                     </a>
                 </li>
